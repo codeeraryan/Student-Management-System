@@ -2,12 +2,14 @@ import React, { createContext, useContext, useState } from 'react';
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword ,signOut} from 'firebase/auth';
 import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
+import { fbConfig } from '../../firebaseConfig';
+
 // Initialize Firebase
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_API_KEY,
-  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  apiKey: fbConfig.REACT_APP_API_KEY,
+  authDomain: fbConfig.REACT_APP_AUTH_DOMAIN,
   databaseURL: "https://wallpaperslit-default-rtdb.firebaseio.com",
-  projectId: process.env.REACT_APP_PROJECT_ID,
+  projectId: fbConfig.REACT_APP_PROJECT_ID,
   storageBucket: "wallpaperslit.firebasestorage.app",
   messagingSenderId: "973032564251",
   appId: "1:973032564251:web:ace21f578b141630ba7abe"

@@ -9,8 +9,8 @@ return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center">
       <div className="bg-white p-8 rounded-lg shadow-lg w-96">
         <h2 className="text-2xl font-bold mb-6 text-center">Login</h2>
-        {activeSignup?<Register/>:<Login/>}
-        <button style={{padding:"10px"}} onClick={()=>setActiveSignup(prev=>!prev)}>{activeSignup?"Already have an account , Login":" Create new account , SignUp"}</button>
-      </div>
+                {activeSignup?<Register/>:<Login/>}
+{ activeSignup?<button style={{padding:"10px"}} onClick={()=>setActiveSignup(false)}>Already have an account? <span className="text-blue-400 text-xl">Login</span></button>:<button style={{padding:"10px"}} onClick={()=>setActiveSignup(true)}>Create a new Account, <span className="text-blue-400 text-xl">Sign Up</span> </button>
+}      </div>
     </div>
   );}
